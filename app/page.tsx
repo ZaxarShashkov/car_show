@@ -2,9 +2,9 @@ import { CarCard, CustomFilter, Hero, SearchBar, ShowMore } from '@/components';
 import { fuels, yearsOfProduction } from '@/constans';
 import { fetchCars } from '@/utils';
 
-export default async function Home({ searchParams }) {
+export default async function Home({ searchParams }: any) {
 	const allCars = await fetchCars({
-		manufacturer: searchParams.manufacturer || '',
+		manufacturer: searchParams.manufacturer || 'bmw',
 		year: searchParams.year || 2022,
 		fuel: searchParams.fuel || '',
 		limit: searchParams.limit || 10,
